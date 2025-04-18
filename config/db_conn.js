@@ -5,7 +5,7 @@ require('dotenv').config();
 const redisClient = redis.createClient();
 
 mongoose.connect(
-    `mongodb+srv://user1:User1pss@cluster0.obfkb3h.mongodb.net/ctse?retryWrites=true&w=majority&appName=Cluster0`,
+    process.env.MONGO_DB_URI,
     {
        
         socketTimeoutMS: 30000,
