@@ -30,3 +30,7 @@ jobs:
         touch .env
         echo "MONGO_DB_URI=${{ secrets.MONGO_DB_URI }}" > .env
         echo "PORT=${{ secrets.PORT }}" >> .env
+    - run: |
+        echo "Generated .env content:"
+        cat .env | sed 's/=.*/=*** (hidden)/'
+
