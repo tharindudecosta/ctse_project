@@ -28,8 +28,4 @@ jobs:
     - run: npm run build --if-present
     - run: |
         touch .env
-        echo -e "MONGO_DB_URI=${{ secrets.MONGO_DB_URI }}\nPORT=${{ secrets.PORT }}" > .env
-    - run: |
-        echo "Generated .env content:"
-        cat .env | sed 's/=.*/=*** (hidden)/'
-
+        echo -e "MONGO_DB_URI=${{ secrets.MONGO_DB_URI }}" > .env
