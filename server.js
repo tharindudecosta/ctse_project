@@ -7,7 +7,7 @@ const app = express();
 
 require('dotenv').config();
 require('./config/db_conn');
-const port = process.env.PORT || 8000;
+const port = 3000;
 
 app.use((req, res, next) => {
     console.log(req.path +" "+ req.method)
