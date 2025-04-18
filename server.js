@@ -20,9 +20,9 @@ app.use(express.urlencoded({ extended: true }));
 
 
 
-app.use("/products", require("./routes/productRouter"))
-app.use("/filter", require("./routes/filterRouter"))
-app.use("/inventory", require("./routes/inventoryRouter"))
+app.use("/api/products", require("./routes/productRouter"))
+app.use("/api/filter", require("./routes/filterRouter"))
+app.use("/api/inventory", require("./routes/inventoryRouter"))
 
 
 app.listen(port, () => {
