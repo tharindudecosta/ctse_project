@@ -28,4 +28,4 @@ jobs:
     - run: npm run build --if-present
     - run: |
         touch .env
-        echo "MONGO_DB_URI=${{ secrets.MONGO_DB_URI }}" > .env
+        echo "${{ secrets.MONGO_DB_URI }}" > .env
