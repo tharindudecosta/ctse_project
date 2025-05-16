@@ -18,7 +18,9 @@ app.use(cors());
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
-
+app.use("/api/test", (res,req)=>{
+    return "CTSE Test api";
+})
 
 app.use("/api/products", require("./routes/productRouter"))
 app.use("/api/filter", require("./routes/filterRouter"))
